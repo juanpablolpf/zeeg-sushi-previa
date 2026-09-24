@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Zeeg Sushi | Jardim Avelino, São Paulo</title>
+<meta name="description" content="Zeeg Sushi: culinária japonesa de alto padrão no Jardim Avelino, perto da Vila Prudente. Av. Francisco Falconi, 100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@400;500;600&display=swap">
+<style>
+  :root { color-scheme: dark; --ground: #0E0C0A; --paper: #171411; --ink: #F5EFE3; --muted: #B7AB97; --line: #2E2821;
+    --accent: #C8A04A; --accent-ink: #171006; --second: #E8D5A8; --display: "Marcellus", Georgia, serif; --body: "Jost", "Segoe UI", sans-serif; --radius: 2px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+  a { color: inherit; } img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.05; text-wrap: balance; letter-spacing: .02em; }
+  .wrap { max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+  .preview-bar { background: var(--ink); color: var(--ground); text-align: center; font-size: .88rem; padding: 8px 16px; line-height: 1.4; }
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .logo { font-family: var(--display); font-weight: 400; font-size: 1.5rem; text-decoration: none; color: var(--accent); letter-spacing: .02em; }
+  .top nav { display: flex; align-items: center; gap: 24px; }
+  .top nav a { text-decoration: none; color: var(--muted); font-size: .98rem; }
+  .top nav a:hover { color: var(--ink); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 12px 22px; border-radius: var(--radius); background: var(--accent); color: var(--accent-ink); border: 2px solid var(--accent); }
+  .btn:hover { filter: brightness(1.07); }
+  .btn-line { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-line:hover { border-color: var(--accent); filter: none; }
+  .top nav .btn { color: var(--accent-ink); padding: 8px 16px; font-size: .95rem; }
+  .menu-toggle { display: none; background: none; border: 2px solid var(--line); color: var(--ink); border-radius: var(--radius); padding: 6px 14px; font: inherit; font-weight: 700; font-size: .95rem; cursor: pointer; }
+  @media (max-width: 760px) {
+    .menu-toggle { display: inline-block; }
+    .top nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--ground); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; }
+    .top nav a { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .top nav .btn { margin-top: 16px; text-align: center; border-bottom: 2px solid var(--accent); padding: 12px; }
+  }
+  .kicker { color: var(--second); font-weight: 700; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(2.6rem, 6.6vw, 5rem); margin-bottom: 22px; }
+  .hero .lede { color: var(--muted); font-size: 1.18rem; max-width: 31em; margin-bottom: 28px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+  .chips span { font-size: .9rem; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  /* abertura: split */
+  .hero.split { display: grid; grid-template-columns: 1fr; gap: 40px; padding-block: 56px 80px; }
+  @media (min-width: 940px) { .hero.split { grid-template-columns: 6fr 5fr; align-items: center; padding-block: 84px 108px; } }
+  .hero.split .photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: calc(var(--radius) * 2); }
+  /* abertura: arco */
+  .hero.arch { display: grid; grid-template-columns: 1fr; gap: 40px; padding-block: 56px 80px; }
+  @media (min-width: 940px) { .hero.arch { grid-template-columns: 7fr 5fr; align-items: center; padding-block: 84px 108px; } }
+  .hero.arch .photo { max-width: 420px; justify-self: center; width: 100%; border: 1px solid var(--accent); padding: 10px; border-radius: 999px 999px 8px 8px; }
+  .hero.arch .photo img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 999px 999px 4px 4px; }
+  /* abertura: foto de fundo */
+  .hero-bg { position: relative; overflow: hidden; }
+  .hero-bg .bg { position: absolute; inset: 0; background-position: center; background-size: cover; opacity: .55; }
+  .hero-bg .bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, var(--ground) 96%); }
+  .hero-bg .wrap { position: relative; padding-block: 120px 88px; }
+  .hero-bg h1 { max-width: 13em; }
+  section.block { padding-block: 84px; border-top: 1px solid var(--line); }
+  .block h2.title { font-size: clamp(2.2rem, 4.8vw, 3.4rem); margin-bottom: 14px; }
+  .block .intro { color: var(--muted); max-width: 38em; margin-bottom: 36px; }
+  .photos { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 820px) { .photos { grid-template-columns: repeat(var(--cols), 1fr); gap: 16px; } }
+  .photos img { width: 100%; height: auto; aspect-ratio: var(--ratio); object-fit: cover; border-radius: var(--radius); }
+  .credit { margin-top: 14px; font-size: .85rem; color: var(--muted); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .tabs button { font: inherit; font-weight: 600; font-size: .98rem; cursor: pointer; padding: 9px 18px; border-radius: var(--radius); background: var(--paper); color: var(--muted); border: 1px solid var(--line); }
+  .tabs button[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .dishes { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0 48px; }
+  @media (min-width: 820px) { .dishes { grid-template-columns: 1fr 1fr; } }
+  .dishes li { padding-block: 18px; border-bottom: 1px solid var(--line); }
+  .dishes h3 { font-size: 1.35rem; margin-bottom: 4px; }
+  .dishes p { color: var(--muted); max-width: 32em; }
+  .menu-cta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .menu-cta p { color: var(--muted); font-size: .95rem; }
+  .feats { list-style: none; display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 760px) { .feats { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1040px) { .feats { grid-template-columns: repeat(var(--fcols), 1fr); } }
+  .feats li { background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: var(--radius); padding: 22px; }
+  .feats li:nth-child(even) { border-top-color: var(--second); }
+  .feats h3 { font-size: 1.4rem; margin-bottom: 6px; }
+  .feats p { color: var(--muted); }
+  .units { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 820px) { .units { grid-template-columns: 1fr 1fr; } }
+  .unit { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .unit .info { padding: 22px; }
+  .unit h3 { font-size: 1.6rem; margin-bottom: 6px; }
+  .unit p { color: var(--muted); margin-bottom: 14px; }
+  .unit iframe { display: block; width: 100%; height: 260px; border: 0; }
+  .visit { display: grid; grid-template-columns: 1fr; gap: 40px; }
+  @media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .address { font-family: var(--display); font-weight: 400; font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.15; margin-bottom: 14px; letter-spacing: .02em; }
+  .phone { color: var(--muted); margin-bottom: 22px; }
+  .phone a { color: var(--accent); font-weight: 700; text-underline-offset: 4px; }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours caption { text-align: left; font-weight: 700; margin-bottom: 6px; }
+  .hours th, .hours td { text-align: left; padding: 12px 0; border-bottom: 1px solid var(--line); font-weight: 400; }
+  .hours th { color: var(--muted); padding-right: 16px; white-space: nowrap; }
+  .hours tr.today th, .hours tr.today td { color: var(--accent); font-weight: 700; }
+  .status { margin-top: 14px; color: var(--muted); } .status b { color: var(--ink); }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .card h3 { font-size: 1.7rem; margin-bottom: 10px; color: var(--accent); }
+  .card p { color: var(--muted); }
+  .card p + p { margin-top: 8px; }
+  .map { margin-top: 44px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .map iframe { display: block; width: 100%; height: clamp(280px, 45vw, 420px); border: 0; }
+  footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  @media (max-width: 480px) { .wrap { padding-inline: 16px; } .hero-bg .wrap { padding-block: 80px 64px; } .actions .btn { flex: 1 1 auto; text-align: center; } }
+</style>
+</head>
+<body>
+  <div class="preview-bar">Proposta de site para o Zeeg Sushi, criada por Juan Filho. Aguardando aprovação.</div>
+  <header class="top"><div class="wrap">
+    <a class="logo" href="#inicio">ZEEG SUSHI</a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Seções"><a href="#casa">Na casa</a><a href="#visite">Visite</a><a class="btn" href="https://wa.me/5511950428427" target="_blank" rel="noopener">Reservar</a></nav>
+  </div></header>
+  <main id="inicio">
+    <div class="wrap hero split"><div><p class="kicker">Jardim Avelino, perto da Vila Prudente</p><h1>Culinária japonesa de alto padrão.</h1><p class="lede">Exclusividade, sabor e elegância: rodízio com frutos do mar e sobremesas, pratos quentes na chapa e drinks, num salão feito para comemorar.</p><div class="chips"><span>Rodízio com sobremesa</span><span>Pratos quentes</span><span>Delivery no iFood</span></div><div class="actions"><a class="btn" href="https://wa.me/5511950428427" target="_blank" rel="noopener">Reservar pelo WhatsApp</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zeeg+Sushi%2C+Av.+Francisco+Falconi%2C+100%2C+Jardim+Avelino%2C+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener">Como chegar</a></div></div><div class="photo"><img src="fotos/p17.jpg" alt="Mesa posta com travessas de sushis e sashimis" width="512" height="640"></div></div>
+    <section class="block" aria-label="Fotos"><div class="wrap"><ul class="photos" style="--cols:3;--ratio:3 / 4"><li><img src="fotos/p13.jpg" alt="Salão do Zeeg Sushi com mesas de madeira" width="512" height="640" loading="lazy"></li><li><img src="fotos/p19.jpg" alt="Camarões na chapa com legumes" width="512" height="640" loading="lazy"></li><li><img src="fotos/p14.jpg" alt="Letreiro iluminado do Zeeg Sushi" width="361" height="640" loading="lazy"></li></ul><p class="credit">Fotos: <a href="https://www.instagram.com/zeeg.sushi/" target="_blank" rel="noopener">@zeeg.sushi</a></p></div></section>
+    
+    <section id="casa" class="block"><div class="wrap"><h2 class="title">Na casa</h2><ul class="feats" style="--fcols:4"><li><h3>Rodízio</h3><p>Sushis, sashimis e frutos do mar, com sobremesas.</p></li><li><h3>Pratos na chapa</h3><p>Peixes, camarões e legumes servidos quentes.</p></li><li><h3>Drinks</h3><p>Caipirinhas, caipilés e drinks da casa.</p></li><li><h3>Aniversários</h3><p>Comemore no Zeeg com reserva pelo WhatsApp.</p></li></ul></div></section>
+    <section id="visite" class="block"><div class="wrap visit"><div><h2 class="title">Visite</h2><p class="address">Av. Francisco Falconi, 100<br>Jardim Avelino, São Paulo</p><p class="phone">WhatsApp: <a href="https://wa.me/5511950428427" target="_blank" rel="noopener">(11) 95042-8427</a> · Telefone: (11) 2341-7705</p><div class="actions"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zeeg+Sushi%2C+Av.+Francisco+Falconi%2C+100%2C+Jardim+Avelino%2C+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener">Como chegar</a><a class="btn btn-line" href="https://wa.me/5511950428427" target="_blank" rel="noopener">Reservar pelo WhatsApp</a></div></div><div class="card"><h3>Quando abrimos</h3><p>Confira o horário do dia nos destaques do Instagram ou pelo WhatsApp.</p></div></div><div class="wrap"><div class="map"><iframe title="Mapa com a localização do Zeeg Sushi" src="https://www.google.com/maps?q=Zeeg+Sushi%2C+Av.+Francisco+Falconi%2C+100%2C+Jardim+Avelino%2C+S%C3%A3o+Paulo+-+SP&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
+  </main>
+  <footer><div class="wrap"><span>Zeeg Sushi</span><span>Av. Francisco Falconi, 100, Jardim Avelino, São Paulo</span></div></footer>
+  
+  <script src="site.js"></script>
+</body>
+</html>
